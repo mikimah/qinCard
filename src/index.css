@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme{
+  --color-primary:#784ea0;
+  --font-Baloo2:'Baloo 2', sans-serif;
+
+  --animate-pop-out: pop-out .25s ease-out, pop-out .5s ease-out 5s forwards reverse;
+  @keyframes pop-out {
+    0% {
+      opacity: 0;
+      transform: scale(0) translateX(-300px);
+
+    }
+    50%{
+      opacity: 0;
+      transform: scale(0.5) translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateX(0);
+
+  }
+}
+}
+
+
+body {
+  background-image: url(assets/pexels-ithalu-907485.jpg);
+  background-position: center;
+  font-family: 'Baloo 2', sans-serif;
+  color: #784ea0;
+}
+
+#root{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ 
+}
+
