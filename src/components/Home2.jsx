@@ -17,11 +17,10 @@ function Home2() {
     if(timeClicked==6){
       triggerExplosion();
     }
-    else{
     chatBubble.classList.toggle("animate-pop-out");
     void chatBubble.offsetWidth; // ép reflow
     chatBubble.classList.toggle("animate-pop-out");
-    }
+    
    
     
   }
