@@ -30,10 +30,8 @@ function Home2() {
     const explode = explodeRef.current;
     if (!pfp || !explode) return;
     explode.classList.toggle("hidden");
-    setTimeout(() => {
-      pfp.src="new-image.jpg"
-      explode.classList.toggle("hidden");
-    }, 2000);
+    setTimeout(() => {pfp.src="new-image.jpg"},1000);
+    setTimeout(() => {explode.classList.toggle("hidden");}, 2000);
   }
 
   return (
