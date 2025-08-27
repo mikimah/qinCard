@@ -1,18 +1,22 @@
 
 
-function Menu({ onToggle }) {
+function Menu({ onToggle, onToggleImg }) {
   const appNum=0;
   const appNum2=2;
+ 
+
+
   return (
-    <div className="flex flex-col justify-center items-center gap-5  max-w-[45rem]">
+    <div className=" flex flex-col justify-center items-center gap-5  max-w-[45rem]">
       <h1 className="animate-[slide-up_.75s_ease-out_forwards] opacity-0 font-extrabold min-md:text-4xl">.˚⋆ Menu ⋆˚.</h1>
       <hr className="animate-[slide-up_.75s_ease-out_.2s_forwards] opacity-0 border w-[80%]"/>
       <div className=" grid grid-flow-col grid-rows-3 min-md:grid-rows-1 min-md:grid-cols-3 gap-5">
-        <div className=" p-2 flex flex-col justify-center items-center gap-2">
+        <div className=" p-2 flex flex-col justify-around items-center gap-2">
           <div className="animate-[slide-up_.75s_ease-out_.4s_forwards] opacity-0 flex flex-col justify-center items-center gap-2">
           <h3 className="font-bold min-md:text-2xl">✧ Full color ✧</h3>
-          <table className="table-auto border-collapse border divide-y-1 ">
-            <tr className="divide-x-1 bg-purple-500/30">
+          <table className="table-auto border-collapse border  ">
+            <tbody className="divide-y-1">
+               <tr className="divide-x-1 bg-purple-500/30">
               <th className="p-1 text-[.75rem] min-md:text-[1rem]">Head</th>
               <th className="p-1 text-[.75rem] min-md:text-[1rem]">Bust up</th>
               <th className="p-1 text-[.75rem] min-md:text-[1rem]">Halfbody</th>
@@ -24,30 +28,32 @@ function Menu({ onToggle }) {
               <td className="p-1 text-[.5rem] min-md:text-[.8rem]">50$</td>
               <td className="p-2 text-[.5rem] min-md:text-[.8rem]">Coming soon</td>
             </tr>
+            </tbody>
           </table>
           <p className="max-md:text-[.75rem]">+ Only 1 character with head commission</p>
           <p className="max-md:text-[.75rem]">+ Bust up: 30$ for additional character</p>
           <p className="max-md:text-[.75rem]">+ Halfbody: 45$ for additional character</p>
           </div>
-          <img src="study.png" className="animate-[slide-up_.75s_ease-out_.6s_forwards] opacity-0 max-md:max-w-[12rem] rounded-2xl " alt="pic1" />
+          <img onClick={() => onToggleImg("study.png")} src="study.png" className="hover:scale-[1.03] hover:cursor-zoom-in transition-[1s] animate-[slide-up_.75s_ease-out_.6s_forwards] opacity-0 max-md:max-w-[12rem] rounded-2xl " alt="pic1" />
         </div>
         <div className=" p-2 pb-0 flex justify-around flex-col items-center gap-5 min-md:justify-center">
-          <img src="occ.png" className="animate-[slide-up_.75s_ease-out_.8s_forwards] opacity-0 max-md:max-w-[12rem] rounded-2xl" alt="pic2" />
-          <img src="Cia.png" className="animate-[slide-up_.75s_ease-out_1s_forwards] opacity-0 max-md:max-w-[12rem] rounded-2xl" alt="pic3" />
+          <img onClick={() => onToggleImg("occ.png")} src="occ.png" className="hover:scale-[1.03] hover:cursor-zoom-in transition-[1s] animate-[slide-up_.75s_ease-out_.8s_forwards] opacity-0 max-md:max-w-[12rem] rounded-2xl" alt="pic2" />
+          <img onClick={() => onToggleImg("Cia.png")} src="Cia.png" className="hover:scale-[1.03] hover:cursor-zoom-in transition-[1s] animate-[slide-up_.75s_ease-out_1s_forwards] opacity-0 max-md:max-w-[12rem] rounded-2xl" alt="pic3" />
         </div>
         <div className="p-2  flex flex-col justify-around  items-center gap-5 min-md:justify-center">
-          <img src="Nyul.png" className="animate-[slide-up_.75s_ease-out_1.2s_forwards] opacity-0 max-md:max-w-[12rem] rounded-2xl min-md:h-[18rem]" alt="pic4" />
-          <img src="Shiro.png" className="animate-[slide-up_.75s_ease-out_1.4s_forwards] opacity-0 max-md:max-w-[12rem] rounded-2xl" alt="pic5" />
+          <img onClick={() => onToggleImg("Nyul.png")} src="Nyul.png" className="hover:scale-[1.03] hover:cursor-zoom-in transition-[1s] animate-[slide-up_.75s_ease-out_1.2s_forwards] opacity-0 max-md:max-w-[12rem] rounded-2xl min-md:h-[18rem]" alt="pic4" />
+          <img onClick={() => onToggleImg("Shiro.png")} src="Shiro.png" className="hover:scale-[1.03] hover:cursor-zoom-in transition-[1s] animate-[slide-up_.75s_ease-out_1.4s_forwards] opacity-0 max-md:max-w-[12rem] rounded-2xl" alt="pic5" />
         </div>
       </div>
       <hr className="border w-[80%] animate-[slide-up_.75s_ease-out_1.6s_forwards] opacity-0"/>
       <div className="gap-5 grid grid-flow-col grid-rows-2 min-md:grid-rows-1 min-md:grid-cols-3"> 
         <div className="max-md:hidden"></div>
-        <div className="flex justify-center items-center"><img className="animate-[slide-up_.75s_ease-out_1.8s_forwards] opacity-0 max-md:max-w-[12rem]" src="chibi2.png" alt="pic6" /></div>
+        <div className="flex justify-center items-center"><img onClick={() => onToggleImg("chibi2.png")} className="hover:scale-[1.03] hover:cursor-zoom-in transition-[1s] animate-[slide-up_.75s_ease-out_1.8s_forwards] opacity-0 max-md:max-w-[12rem]" src="chibi2.png" alt="pic6" /></div>
         <div className=" flex flex-col justify-center items-center gap-5 animate-[slide-up_.75s_ease-out_2s_forwards] opacity-0">
           <h1 className="font-bold min-md:text-2xl">✧ Chibi ✧</h1>
-          <table className="table-auto border-collapse border divide-y-1 w-[80%] ">
-            <tr className="divide-x-1 bg-purple-500/30 ">
+          <table className="table-auto border-collapse border  w-[80%] ">
+            <tbody className="divide-y-1">
+              <tr className="divide-x-1 bg-purple-500/30 ">
               <th className="p-1 text-[.75rem]  min-md:text-[1rem]">Head</th>
               <th className="p-1 text-[.75rem]  min-md:text-[1rem]">Fullbody</th>
             </tr>
@@ -55,6 +61,7 @@ function Menu({ onToggle }) {
               <td className="p-1 text-[.5rem]  min-md:text-[.8rem]">10$</td>
               <td className="p-1 text-[.5rem]  min-md:text-[.8rem]">25$</td>
             </tr>
+            </tbody>
           </table>
           <p className="max-md:text-[.75rem]">+ Only 1 character with head commission</p>
           <p className="max-md:text-[.75rem]">+ Fullbody: 20$ for additional character</p>
