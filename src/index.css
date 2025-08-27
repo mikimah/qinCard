@@ -6,8 +6,14 @@
   --color-primary:#784ea0;
   --font-Baloo2:'Baloo 2', sans-serif;
 
-  --animate-pop-out: pop-out .25s ease-out, pop-out .5s ease-out 4s forwards reverse;
-  --animate-slide-up: slide-up .75s ease-out;
+  --animate-pop-out: pop-out .25s ease-out forwards, pop-out .5s ease-out 4s forwards reverse;
+  --animate-slide-up: slide-up 1s ease-out forwards;
+  --animate-slide-up2: slide-up 1s ease-out 0.25s forwards;
+  --animate-slide-up3: slide-up 1s ease-out 0.5s forwards;
+  --animate-slide-up4: slide-up 1s ease-out 0.75s forwards;
+  --animate-slide-up5: slide-up 1s ease-out 1s forwards;
+  --animate-slide-up6: slide-up 1s ease-out 1.25s forwards;
+  --animate-slide-upTest: slide-up;
 
   @keyframes pop-out {
     0% {
@@ -28,7 +34,7 @@
    @keyframes slide-up {
     0% {
       opacity: 0;
-      transform: translateY(50px);
+      transform: translateY(30px);
     }
     100% {
       opacity: 1;
@@ -41,13 +47,15 @@
 body {
   background-image: url(assets/pexels-ithalu-907485.jpg);
   background-position: center;
+  background-size: cover;
   font-family: 'Baloo 2', sans-serif;
   color: #784ea0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
 }
+
 
 
