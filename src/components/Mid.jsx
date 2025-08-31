@@ -1,3 +1,4 @@
+import chickenImg from "../assets/chicken.png";
 
 
 function Mid({ onToggle }) {
@@ -6,7 +7,7 @@ function Mid({ onToggle }) {
   return (
     <div className="flex flex-col justify-center items-center gap-5  max-w-[42rem] ">
         <div className="flex flex-col justify-center items-center gap-5 min-md:flex-row ">
-            <img src="chicken.png" className=" max-h-[15rem] animate-[slide-up_.75s_ease-out_forwards] opacity-0" alt="if yo seeing this then your search engine is done bro." />
+            <img src={chickenImg} className=" max-h-[15rem] animate-[slide-up_.75s_ease-out_forwards] opacity-0" alt="if yo seeing this then your search engine is done bro." />
             <div className=" flex flex-col justify-center items-center gap-5 min-md:w-[50%]">
               <p className="opacity-0 text-[.8rem] tracking-[1px] min-md:text-[.9rem] text-center animate-[slide-up_.75s_ease-out_.2s_forwards]">Thank you for stopping by! Please take a look at my T.O.S carefully before placing an order. Reach me through Instagram, Facebook, X or my email!</p>
                 <hr className="w-[100%] border animate-[slide-up_.75s_ease-out_.4s_forwards] opacity-0 " />

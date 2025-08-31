@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram,faXTwitter,faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { useRef, useState,useEffect } from 'react';
+import pfp from '../assets/pfp.jpg';
+import explodeImg from '../assets/explode.jpg';
 
 function Home2({ onToggle }) {
   const appNum = 1;
@@ -43,8 +45,8 @@ function Home2({ onToggle }) {
       <div className="flex flex-col justify-center items-center gap-2 min-md:items-start">
         <div className=' flex justify-center items-center flex-col'>
         <div className='relative chat chat-start animate-[slide-up_.75s_ease-out_.2s_forwards] opacity-0  w-[5rem] h-[5rem] min-md:w-[6.5rem] min-md:h-[6.5rem]'>
-          <img ref={pfpRef} onClick={timeClicked == 7 ? null : ()=>toggleAnimation()} className="   hover:cursor-pointer w-[5rem] h-[5rem]  rounded-full box-border border border-white p-1 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] min-md:w-[6.5rem] min-md:h-[6.5rem]" src="pfp.jpg" alt="This is a pfp" />
-          <img src="explode.jpg" ref={explodeRef} alt="explosion image" className='hidden absolute w-[100%] h-[100%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]' />
+          <img ref={pfpRef} onClick={timeClicked == 7 ? null : ()=>toggleAnimation()} className="   hover:cursor-pointer w-[5rem] h-[5rem]  rounded-full box-border border border-white p-1 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] min-md:w-[6.5rem] min-md:h-[6.5rem]" src={pfp} alt="This is a pfp" />
+          <img src={explodeImg} ref={explodeRef} alt="explosion image" className='hidden absolute w-[100%] h-[100%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]' />
           <div ref={chatBubbleRef} className='absolute left-[110%] opacity-0'>
             <div data-theme="light" className='chat-bubble bg-white rounded-2xl pl-2 pr-4'>
               <pre className='text-[.45rem] text-purple-500 font-Baloo2 font-bold min-md:text-[1rem] min-md:pr-2'>{words[timeClicked]}</pre>
